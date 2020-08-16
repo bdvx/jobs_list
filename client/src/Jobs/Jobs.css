@@ -1,0 +1,12 @@
+.job {
+    width: 80%;
+    margin: 10px 35px;
+    padding: 10px 0;
+    display: 'flex';
+    justify-content: 'space-around';
+    cursor: pointer;
+}
+
+.job:hover{
+    color:gray
+}
