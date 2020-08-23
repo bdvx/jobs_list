@@ -16,7 +16,7 @@ function App() {
   return (
     <div className="App">
       <Typography variant="h1" className="title">
-                Software Jobs List
+                Software/Design Jobs List
       </Typography>
       <Grid container className="jobs-container" spacing={2}>
         <Grid item xs={8} >
