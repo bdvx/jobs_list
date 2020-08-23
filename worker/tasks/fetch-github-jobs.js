@@ -1,5 +1,11 @@
 var fetch = require('node-fetch');
 
+const redis = require("redis");
+const client = redis.createClient();
+
+const { promisify } = require("util");
+// const getAsync = promisify(client.get).bind(client);
+const setAsync = promisify(client.set).bind(client);
 
 const baseURL = 'https://jobs.github.com/positions.json';
 
@@ -23,9 +29,10 @@ async function fetchGithubJobs() {
         page++;
     }
 
-    console.log('allJobs', allJobs);
+    
 
-
+    const successResult = await setAsync('githubJobs', JSON.stringify(allJobs));
+    console.log('allJobs', {successResult});
 }
 
 fetchGithubJobs();
