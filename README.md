@@ -12,6 +12,11 @@ Now this app is using(going to use) API from:
 - Redis for caching
 - The API part is an Express server which uses node workers to update our jobs on cron
 
+*Planned pool of jobs: 
+  frontend SE(for myself), Unity and UX/UI design (for my friends :) )
+
+
+
 ![image](client/public/jobs_list_scheme.png)
 
 
